@@ -14,7 +14,6 @@ import FirebaseFirestore
 import Onboarding
 import SwiftUI
 
-
 struct AccountSetup: View {
     @Binding private var onboardingSteps: [OnboardingFlow.Step]
     @EnvironmentObject var account: Account
@@ -23,7 +22,7 @@ struct AccountSetup: View {
         startPoint: .leading,
         endPoint: .trailing
     )
-    
+
     var body: some View {
         OnboardingView(
             contentView: {
@@ -44,7 +43,7 @@ struct AccountSetup: View {
             .onReceive(account.objectWillChange) {
                 if account.signedIn {
                     onboardingSteps.append(.healthKitPermissions)
-                    
+
                     if let user = Auth.auth().currentUser {
                         let uid = user.uid
                         let name = user.displayName?.components(separatedBy: " ")
@@ -71,7 +70,7 @@ struct AccountSetup: View {
                 }
             }
     }
-    
+
     @ViewBuilder
     private var accountImage: some View {
         Group {
@@ -92,7 +91,7 @@ struct AccountSetup: View {
             .font(.system(size: 150))
             .foregroundColor(.accentColor)
     }
-    
+
     @ViewBuilder
     private var accountDescription: some View {
         VStack {
@@ -111,7 +110,7 @@ struct AccountSetup: View {
             }
         }
     }
-    
+
     @ViewBuilder
     private var actionView: some View {
         if account.signedIn {
@@ -134,19 +133,16 @@ struct AccountSetup: View {
             )
         }
     }
-    
-    
+
     init(onboardingSteps: Binding<[OnboardingFlow.Step]>) {
         self._onboardingSteps = onboardingSteps
     }
 }
 
-
 #if DEBUG
 struct AccountSetup_Previews: PreviewProvider {
     @State private static var path: [OnboardingFlow.Step] = []
-    
-    
+
     static var previews: some View {
         AccountSetup(onboardingSteps: $path)
             .environmentObject(Account(accountServices: []))

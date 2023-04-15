@@ -9,11 +9,9 @@
 import PAWSSharedContext
 import SwiftUI
 
-
 struct IconView: View {
     let size: Double
-    
-    
+
     var body: some View {
         Image(uiImage: Bundle.module.image(withName: "AppIcon", fileExtension: "png"))
             .resizable()
@@ -24,13 +22,11 @@ struct IconView: View {
             .shadow(color: Color(.systemGray4), radius: 4, x: 0, y: 4)
             .padding(.bottom)
     }
-    
-    
+
     init(size: Double = 150) {
         self.size = size
     }
 }
-
 
 #if DEBUG
 struct IconView_Previews: PreviewProvider {

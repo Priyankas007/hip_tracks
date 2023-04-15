@@ -9,11 +9,9 @@
 import Onboarding
 import SwiftUI
 
-
 struct Welcome: View {
     @Binding private var onboardingSteps: [OnboardingFlow.Step]
-    
-    
+
     var body: some View {
         OnboardingView(
             title: "WELCOME_TITLE".moduleLocalized,
@@ -41,18 +39,15 @@ struct Welcome: View {
             }
         )
     }
-    
-    
+
     init(onboardingSteps: Binding<[OnboardingFlow.Step]>) {
         self._onboardingSteps = onboardingSteps
     }
 }
 
-
 struct Welcome_Previews: PreviewProvider {
     @State private static var path: [OnboardingFlow.Step] = []
-    
-    
+
     static var previews: some View {
         Welcome(onboardingSteps: $path)
     }

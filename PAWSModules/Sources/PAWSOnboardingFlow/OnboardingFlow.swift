@@ -9,7 +9,6 @@
 import PAWSSharedContext
 import SwiftUI
 
-
 /// Displays an multi-step onboarding flow for the CS342 2023 PAWS Team Application.
 public struct OnboardingFlow: View {
     enum Step: String, Codable {
@@ -20,11 +19,9 @@ public struct OnboardingFlow: View {
         case signUp
         case healthKitPermissions
     }
-    
-    
+
     @SceneStorage(StorageKeys.onboardingFlowStep) private var onboardingSteps: [Step] = []
-    
-    
+
     public var body: some View {
         VStack {
             NavigationStack(path: $onboardingSteps) {
@@ -55,11 +52,9 @@ public struct OnboardingFlow: View {
             }
         }
     }
-    
-    
+
     public init() {}
 }
-
 
 struct OnboardingFlow_Previews: PreviewProvider {
     static var previews: some View {

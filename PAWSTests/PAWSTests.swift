@@ -9,7 +9,6 @@
 @testable import PAWS
 import XCTest
 
-
 class PAWSTests: XCTestCase {
     func testExample() throws {
         XCTAssertTrue(true)

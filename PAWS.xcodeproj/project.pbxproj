@@ -36,6 +36,7 @@
 		2FC9759F2978E39600BA99FE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FC9759E2978E39600BA99FE /* Localizable.strings */; };
 		3637947E2992F3B000B3C006 /* PAWSLandingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 3637947D2992F3B000B3C006 /* PAWSLandingScreen */; };
 		36379481299308AA00B3C006 /* PAWSNotificationScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 36379480299308AA00B3C006 /* PAWSNotificationScreen */; };
+		54E2B1A129EB1491009FF68F /* PAWSSchedule in Frameworks */ = {isa = PBXBuildFile; productRef = 54E2B1A029EB1491009FF68F /* PAWSSchedule */; };
 		653A2551283387FE005D4D48 /* PAWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A2550283387FE005D4D48 /* PAWS.swift */; };
 		653A255528338800005D4D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653A255428338800005D4D48 /* Assets.xcassets */; };
 		653A256228338800005D4D48 /* PAWSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A256128338800005D4D48 /* PAWSTests.swift */; };
@@ -88,6 +89,7 @@
 				2F59B941298C628800C5107F /* PAWSOnboardingFlow in Frameworks */,
 				2F9F4D8329B7FFAE00ABE259 /* CardinalKitHealthKitToFHIRAdapter in Frameworks */,
 				2F49B7822980419C00BCB272 /* Questionnaires in Frameworks */,
+				54E2B1A129EB1491009FF68F /* PAWSSchedule in Frameworks */,
 				2F49B77E2980407C00BCB272 /* Scheduler in Frameworks */,
 				2F9056D3299E1B9C003D3802 /* FHIRToFirestoreAdapter in Frameworks */,
 				2FABBC5B29A8975900DF3BBC /* FirebaseFirestoreSwift in Frameworks */,
@@ -234,6 +236,7 @@
 				2FABBC5829A8975900DF3BBC /* FirebaseFirestore */,
 				2FABBC5A29A8975900DF3BBC /* FirebaseFirestoreSwift */,
 				2F9F4D8229B7FFAE00ABE259 /* CardinalKitHealthKitToFHIRAdapter */,
+				54E2B1A029EB1491009FF68F /* PAWSSchedule */,
 			);
 			productName = TemplateApplication;
 			productReference = 653A254D283387FE005D4D48 /* PAWS.app */;
@@ -892,6 +895,10 @@
 		36379480299308AA00B3C006 /* PAWSNotificationScreen */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PAWSNotificationScreen;
+		};
+		54E2B1A029EB1491009FF68F /* PAWSSchedule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PAWSSchedule;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

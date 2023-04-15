@@ -10,7 +10,6 @@
 
 import PackageDescription
 
-
 let package = Package(
     name: "PAWSModules",
     defaultLocalization: "en",
@@ -23,7 +22,8 @@ let package = Package(
         .library(name: "PAWSOnboardingFlow", targets: ["PAWSOnboardingFlow"]),
         .library(name: "PAWSSharedContext", targets: ["PAWSSharedContext"]),
         .library(name: "PAWSLandingScreen", targets: ["PAWSLandingScreen"]),
-        .library(name: "PAWSNotificationScreen", targets: ["PAWSNotificationScreen"])
+        .library(name: "PAWSNotificationScreen", targets: ["PAWSNotificationScreen"]),
+        .library(name: "PAWSSchedule", targets: ["PAWSSchedule"])
     ],
     dependencies: [
         .package(url: "https://github.com/StanfordBDHG/CardinalKit.git", .upToNextMinor(from: "0.3.5")),
@@ -79,6 +79,9 @@ let package = Package(
         ),
         .target(
             name: "PAWSNotificationScreen"
+        ),
+        .target(
+            name: "PAWSSchedule"
         )
     ]
 )

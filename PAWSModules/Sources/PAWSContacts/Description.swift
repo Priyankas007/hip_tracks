@@ -14,7 +14,7 @@ struct DescriptionView: View {
         startPoint: .leading,
         endPoint: .trailing
     )
-    
+
     var body: some View {
         VStack(spacing: 1) {
             Text("DESCRIPTION")
@@ -38,13 +38,13 @@ struct DescriptionView: View {
                 .padding(.vertical, 2)
         }
     }
-    
+
     private var description: String {
         guard let descriptionPath = Bundle.module.path(forResource: "StudyDescription", ofType: "md"),
               let description = try? String(contentsOfFile: descriptionPath) else {
             return ""
         }
-        
+
         return description
     }
 }

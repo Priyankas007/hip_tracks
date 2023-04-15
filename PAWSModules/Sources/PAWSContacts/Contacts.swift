@@ -42,7 +42,7 @@ struct Question1234View: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 2)
-        
+
         VStack(spacing: 1) {
             Text("2. What happens if I don’t have internet access when I record the Apple Watch ECG?")
                 .font(.custom("Gill Sans SemiBold", fixedSize: 19))
@@ -69,7 +69,7 @@ struct Question1234View: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 2)
-        
+
         VStack(spacing: 1) {
             Text("3. Will the research team use my Apple Watch ECG data to provide care or change my treatment plan?")
                 .font(.custom("Gill Sans SemiBold", fixedSize: 19))
@@ -96,7 +96,7 @@ struct Question1234View: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 2)
-        
+
         VStack(spacing: 1) {
             Text("4. If I am experiencing symptoms that need immediate medical attention, will the PAWS app or Apple Watch call 9-1-1 for me?")
                 .font(.custom("Gill Sans SemiBold", fixedSize: 19))
@@ -124,40 +124,40 @@ struct Question1234View: View {
         .padding(.horizontal)
         .padding(.vertical, 2)
     }
-    
+
     private var question1: String {
         guard let question1Path = Bundle.module.path(forResource: "Question1", ofType: "md"),
               let question1 = try? String(contentsOfFile: question1Path) else {
             return ""
         }
-        
+
         return question1
     }
-    
+
     private var question2: String {
         guard let question2Path = Bundle.module.path(forResource: "Question2", ofType: "md"),
               let question2 = try? String(contentsOfFile: question2Path) else {
             return ""
         }
-        
+
         return question2
     }
-    
+
     private var question3: String {
         guard let question3Path = Bundle.module.path(forResource: "Question3", ofType: "md"),
               let question3 = try? String(contentsOfFile: question3Path) else {
             return ""
         }
-        
+
         return question3
     }
-    
+
     private var question4: String {
         guard let question4Path = Bundle.module.path(forResource: "Question4", ofType: "md"),
               let question4 = try? String(contentsOfFile: question4Path) else {
             return ""
         }
-        
+
         return question4
     }
 }
@@ -190,7 +190,7 @@ struct Question56789View: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 2)
-        
+
         VStack(spacing: 1) {
             Text("6. Can anything good happen to me by participating in this study?")
                 .font(.custom("Gill Sans SemiBold", fixedSize: 19))
@@ -217,7 +217,7 @@ struct Question56789View: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 2)
-        
+
         VStack(spacing: 1) {
             Text("7. Will anyone know I am in the study?")
                 .font(.custom("Gill Sans SemiBold", fixedSize: 19))
@@ -244,7 +244,7 @@ struct Question56789View: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 2)
-        
+
         VStack(spacing: 1) {
             Text("8. Who can I talk to about the study?")
                 .font(.custom("Gill Sans SemiBold", fixedSize: 19))
@@ -271,7 +271,7 @@ struct Question56789View: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 2)
-        
+
         VStack(spacing: 1) {
             Text("9. What if I do not want to be in the study?")
                 .font(.custom("Gill Sans SemiBold", fixedSize: 19))
@@ -299,49 +299,49 @@ struct Question56789View: View {
         .padding(.horizontal)
         .padding(.vertical, 2)
     }
-    
+
     private var question5: String {
         guard let question5Path = Bundle.module.path(forResource: "Question5", ofType: "md"),
               let question5 = try? String(contentsOfFile: question5Path) else {
             return ""
         }
-        
+
         return question5
     }
-    
+
     private var question6: String {
         guard let question6Path = Bundle.module.path(forResource: "Question6", ofType: "md"),
               let question6 = try? String(contentsOfFile: question6Path) else {
             return ""
         }
-        
+
         return question6
     }
-    
+
     private var question7: String {
         guard let question7Path = Bundle.module.path(forResource: "Question7", ofType: "md"),
               let question7 = try? String(contentsOfFile: question7Path) else {
             return ""
         }
-        
+
         return question7
     }
-    
+
     private var question8: String {
         guard let question8Path = Bundle.module.path(forResource: "Question8", ofType: "md"),
               let question8 = try? String(contentsOfFile: question8Path) else {
             return ""
         }
-        
+
         return question8
     }
-    
+
     private var question9: String {
         guard let question9Path = Bundle.module.path(forResource: "Question9", ofType: "md"),
               let question9 = try? String(contentsOfFile: question9Path) else {
             return ""
         }
-        
+
         return question9
     }
 }
@@ -411,8 +411,7 @@ public struct Contacts: View {
             ]
         )
     ]
-    
-    
+
     public var body: some View {
             NavigationStack {
                 ScrollView(.vertical) {
@@ -451,10 +450,9 @@ public struct Contacts: View {
                     .navigationTitle(String(localized: "CONTACTS_NAVIGATION_TITLE", bundle: .module))
             }
         }
-    
+
     public init() {}
 }
-
 
 struct Contacts_Previews: PreviewProvider {
     static var previews: some View {

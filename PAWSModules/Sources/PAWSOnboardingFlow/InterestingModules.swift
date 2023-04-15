@@ -9,11 +9,9 @@
 import Onboarding
 import SwiftUI
 
-
 struct InterestingModules: View {
     @Binding private var onboardingSteps: [OnboardingFlow.Step]
-    
-    
+
     var body: some View {
         VStack {
             Image(systemName: "pawprint.circle.fill")
@@ -51,18 +49,15 @@ struct InterestingModules: View {
             )
         }
     }
-    
-    
+
     init(onboardingSteps: Binding<[OnboardingFlow.Step]>) {
         self._onboardingSteps = onboardingSteps
     }
 }
 
-
 struct ThingsToKnow_Previews: PreviewProvider {
     @State private static var path: [OnboardingFlow.Step] = []
-    
-    
+
     static var previews: some View {
         InterestingModules(onboardingSteps: $path)
     }

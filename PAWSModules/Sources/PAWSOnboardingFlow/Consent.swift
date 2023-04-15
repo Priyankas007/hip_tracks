@@ -10,11 +10,9 @@ import Onboarding
 import PAWSSharedContext
 import SwiftUI
 
-
 struct Consent: View {
     @Binding private var onboardingSteps: [OnboardingFlow.Step]
-    
-    
+
     private var consentDocument: Data {
         guard let path = Bundle.module.url(forResource: "ConsentDocument", withExtension: "md"),
               let data = try? Data(contentsOf: path) else {
@@ -22,7 +20,7 @@ struct Consent: View {
         }
         return data
     }
-    
+
     var body: some View {
         VStack {
             Image(systemName: "pawprint.circle.fill")
@@ -38,7 +36,7 @@ struct Consent: View {
                         subtitle: "CONSENT_SUBTITLE".moduleLocalized
                     )
                 },
-                
+
                 asyncMarkdown: {
                     consentDocument
                 },
@@ -53,18 +51,15 @@ struct Consent: View {
             .offset(y: -20)
         }
     }
-    
-    
+
     init(onboardingSteps: Binding<[OnboardingFlow.Step]>) {
         self._onboardingSteps = onboardingSteps
     }
 }
 
-
 struct Consent_Previews: PreviewProvider {
     @State private static var path: [OnboardingFlow.Step] = []
-    
-    
+
     static var previews: some View {
         Consent(onboardingSteps: $path)
     }

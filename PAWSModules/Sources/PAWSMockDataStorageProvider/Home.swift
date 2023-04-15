@@ -11,7 +11,6 @@ import PAWSNotificationScreen
 import PAWSSharedContext
 import SwiftUI
 
-
 enum Tabs: String {
     case home
     case contact
@@ -20,7 +19,7 @@ enum Tabs: String {
 
 public struct HomeView: View {
     @AppStorage(StorageKeys.homeTabSelection) var selectedTab = Tabs.home
-    
+
     public var body: some View {
         TabView(selection: $selectedTab) {
             HomeScreen()
@@ -42,7 +41,6 @@ public struct HomeView: View {
     }
     public init() {}
 }
-
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

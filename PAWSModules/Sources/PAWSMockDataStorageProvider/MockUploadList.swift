@@ -8,11 +8,10 @@
 
 import SwiftUI
 
-
 /// Displays the recoded uploads collected by the ``MockDataStorageProvider``.
 public struct MockUploadList: View {
     @EnvironmentObject var mockDataStorageProvider: MockDataStorageProvider
-    
+
     public var body: some View {
         ZStack {
             Color.white
@@ -45,10 +44,9 @@ public struct MockUploadList: View {
             }
         }
     }
-    
+
     public init() {}
 
-    
     private func format(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
@@ -56,7 +54,6 @@ public struct MockUploadList: View {
         return dateFormatter.string(from: date)
     }
 }
-
 
 struct MockUploadsList_Previews: PreviewProvider {
     static var previews: some View {

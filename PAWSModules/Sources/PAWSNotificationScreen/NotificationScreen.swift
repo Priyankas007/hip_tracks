@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-
 public struct NotificationScreen: View {
     public var body: some View {
         ScrollView(.vertical) {
@@ -24,11 +23,9 @@ public struct NotificationScreen: View {
             }
         }
     }
-    
-    
+
     public init() {}
 }
-
 
 struct NotificationScreen_Previews: PreviewProvider {
     static var previews: some View {

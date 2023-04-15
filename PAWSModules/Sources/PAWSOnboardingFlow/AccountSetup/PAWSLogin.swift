@@ -10,7 +10,6 @@ import Account
 import Onboarding
 import SwiftUI
 
-
 struct PAWSLogin: View {
     var body: some View {
         Login {
@@ -25,7 +24,6 @@ struct PAWSLogin: View {
             .navigationBarTitleDisplayMode(.large)
     }
 }
-
 
 #if DEBUG
 struct PAWSLogin_Previews: PreviewProvider {

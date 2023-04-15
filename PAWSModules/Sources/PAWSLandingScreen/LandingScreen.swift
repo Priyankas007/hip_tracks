@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-
 public struct LandingScreen: View {
     private let backgroundGradient = LinearGradient(
         colors: [.red, .pink, .orange, .yellow],
@@ -16,8 +15,7 @@ public struct LandingScreen: View {
         endPoint: .trailing
     )
     @Binding private var launchStatus: Bool
-    
-    
+
     public var body: some View {
         VStack {
             backgroundGradient
@@ -50,17 +48,15 @@ public struct LandingScreen: View {
             )
         }
     }
-    
-    
+
     public init(pressedStart: Binding<Bool>) {
         self._launchStatus = pressedStart
     }
 }
 
-
 struct LandingScreen_Previews: PreviewProvider {
     @State private static var pressedStart = false
-    
+
     static var previews: some View {
         LandingScreen(pressedStart: $pressedStart)
     }

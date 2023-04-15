@@ -12,12 +12,10 @@ import Onboarding
 import PAWSSharedContext
 import SwiftUI
 
-
 struct HealthKitPermissions: View {
     @EnvironmentObject var healthKitDataSource: HealthKit<FHIR>
     @AppStorage(StorageKeys.onboardingFlowComplete) var completedOnboardingFlow = false
-    
-    
+
     var body: some View {
         OnboardingView(
             contentView: {
@@ -57,7 +55,6 @@ struct HealthKitPermissions: View {
         )
     }
 }
-
 
 struct HealthKitPermissions_Previews: PreviewProvider {
     static var previews: some View {

@@ -13,11 +13,10 @@ import Foundation
 import SwiftUI
 import Views
 
-
 struct UserView: View {
     @EnvironmentObject var account: Account
     @EnvironmentObject var firebaseAccountConfiguration: FirebaseAccountConfiguration<FHIR>
-    
+
     var body: some View {
         userInformation
             .padding()
@@ -27,8 +26,7 @@ struct UserView: View {
                     .shadow(color: .gray, radius: 2)
             )
     }
-    
-    
+
     @ViewBuilder
     private var userInformation: some View {
         HStack(spacing: 16) {
@@ -57,7 +55,6 @@ struct UserView: View {
         }
     }
 }
-
 
 #if DEBUG
 struct SwiftUIView_Previews: PreviewProvider {

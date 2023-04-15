@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-
 extension Bundle {
     /// Loads an image from the `Bundle` and returns the content as a SwiftUI `Image`.
     /// - Parameter name: The name of the image file.
@@ -18,7 +17,7 @@ extension Bundle {
            let image = UIImage(contentsOfFile: imagePath) else {
             return Image(systemName: "person.fill")
         }
-        
+
         return Image(uiImage: image)
     }
 }
