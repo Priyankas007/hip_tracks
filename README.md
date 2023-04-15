@@ -8,7 +8,7 @@ SPDX-License-Identifier: MIT
 
 -->
 
-# CS342 2023 PAWS Team Application
+# HipTracks Team Application
 
 This repository contains the HipTracks Team Application.
 
