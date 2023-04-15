@@ -1,6 +1,6 @@
 <!--
 
-This source file is part of the CS342 2023 PAWS Team Application project
+This source file is part of the HipTracks Team Application project
 
 SPDX-FileCopyrightText: 2023 Stanford University
 
@@ -8,9 +8,9 @@ SPDX-License-Identifier: MIT
 
 -->
 
-# CS342 2023 PAWS Team Application
+# HipTracks Team Application
 
-This repository contains the CS342 2023 PAWS Team Application.
+This repository contains the HipTracks Team Application.
 
 It demonstrates using the [CardinalKit](https://github.com/StanfordBDHG/CardinalKit) framework template and builds on top of the [StanfordBDHG Template Application](https://github.com/StanfordBDHG/PAWS) and [StanfordBDHG CardinalKit Template Application](https://github.com/StanfordBDHG/CardinalKitPAWS).
 
