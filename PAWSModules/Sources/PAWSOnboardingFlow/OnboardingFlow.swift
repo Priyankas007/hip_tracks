@@ -19,6 +19,8 @@ public struct OnboardingFlow: View {
         case login
         case signUp
         case healthKitPermissions
+        case notificationSetup
+
     }
     
     
@@ -49,6 +51,8 @@ public struct OnboardingFlow: View {
                             Consent(onboardingSteps: $onboardingSteps)
                         case .healthKitPermissions:
                             HealthKitPermissions()
+                        case .notificationSetup:
+                            NotificationSetup( onboardingSteps: $onboardingSteps)
                         }
                     }
                     .navigationBarTitleDisplayMode(.inline)
