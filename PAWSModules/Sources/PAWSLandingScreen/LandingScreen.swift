@@ -11,30 +11,25 @@ import SwiftUI
 
 public struct LandingScreen: View {
     private let backgroundGradient = LinearGradient(
-        colors: [.red, .pink, .orange, .yellow],
+        colors: [.blue, .green, .yellow, .orange],
         startPoint: .leading,
         endPoint: .trailing
     )
     @Binding private var launchStatus: Bool
-    
-    
     public var body: some View {
-        VStack {
-            backgroundGradient
-            .mask(
+        VStack{
                 VStack {
-                    Image(systemName: "pawprint.circle.fill")
+                    Image("hip_tracks_logo")
                         .resizable()
                         .scaledToFill()
-                        .frame(width: 200, height: 200)
-                        .foregroundColor(.red)
-                    Text("PAWS")
-                        .font(.custom("GillSans-Bold", fixedSize: 30))
-                    Text("The Pediatric Apple Watch Study")
-                        .font(.custom("GillSans", fixedSize: 15))
-                        .offset(y: 50)
+                        .frame(width: 230, height: 230)
+                    Text("A simpler way to monitor")
+                        .fontWeight(.bold)
+                        .padding(10)
+                    Text("your hip health")
+                        .fontWeight(.bold)
+                        .offset(y: -20)
                 }
-            )
             Button(
                 action: {
                     launchStatus = true
@@ -42,10 +37,11 @@ public struct LandingScreen: View {
                 Text("Tap to get started")
                     .fontWeight(.bold)
                     .padding()
-                    .foregroundColor(Color.red)
+                    .foregroundColor(Color("CustomBlue"))
                     .border(backgroundGradient, width: 3)
                     .cornerRadius(5)
-                    .offset(y: -30)
+                    .offset(y: -20)
+                   
                 }
             )
         }
