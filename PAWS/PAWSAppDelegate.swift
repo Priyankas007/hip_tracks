@@ -17,6 +17,7 @@ import FirestoreStoragePrefixUserIdAdapter
 import HealthKit
 import HealthKitDataSource
 import PAWSMockDataStorageProvider
+import PAWSSchedule
 import PAWSSharedContext
 import Questionnaires
 import Scheduler
@@ -38,6 +39,7 @@ class PAWSAppDelegate: CardinalKitAppDelegate {
             }
             QuestionnaireDataSource()
             MockDataStorageProvider()
+            PAWSApplicationScheduler()
         }
     }
 

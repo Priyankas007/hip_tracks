@@ -13,6 +13,7 @@ import Foundation
 import SwiftUI
 import Views
 import PAWSSchedule
+import Scheduler
 
 public struct HomeScreen: View {
     private let backgroundGradient = LinearGradient(
