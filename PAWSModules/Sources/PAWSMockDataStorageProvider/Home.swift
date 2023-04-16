@@ -39,7 +39,7 @@ public struct HomeView: View {
                 .tabItem {
                     Label("Tasks", systemImage: "list.clipboard")
                 }
-            Contacts()
+            Care()
                 .tag(Tabs.contact)
                 .tabItem {
                     Label("Support", systemImage: "person.fill")
