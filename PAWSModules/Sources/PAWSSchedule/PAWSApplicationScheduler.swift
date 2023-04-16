@@ -34,7 +34,7 @@ extension PAWSApplicationScheduler {
                         dateComponents: .init(hour: 0, minute: 30), // Every Day at 12:30 AM
                         end: .numberOfEvents(356)
                     ),
-                    context: PAWSApplicationTaskContext.questionnaire(Bundle.module.questionnaire(withName: "SocialSupportQuestionnaire"))
+                    context: PAWSApplicationTaskContext.researchKitTask(ResearchKitTaskContext.woundphoto)
                 ),
                 Task(
                     title: String(localized: "TASK_WALK_TITLE", bundle: .module),

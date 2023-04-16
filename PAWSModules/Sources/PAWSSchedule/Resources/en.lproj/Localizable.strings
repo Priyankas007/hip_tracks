@@ -6,6 +6,9 @@
 // SPDX-License-Identifier: MIT
 //
 
+"QUESTIONNAIRE_ACTION" = "Start Questionnaire";
+"RESEARCHKIT_TASK_ACTION" = "Start Task";
+
 // MARK: - Schedule
 "SCHEDULE_LIST_TITLE" = "Tasks";
 "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_TITLE" = "Hip Mobility Questionnaire";

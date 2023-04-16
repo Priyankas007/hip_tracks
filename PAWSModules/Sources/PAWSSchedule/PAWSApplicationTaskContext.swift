@@ -14,11 +14,14 @@ import FHIR
 public enum PAWSApplicationTaskContext: Codable, Identifiable {
     /// The task schould display a `Questionnaire`.
     case questionnaire(Questionnaire)
+    case researchKitTask(ResearchKitTaskContext)
 
-    public var id: Questionnaire.ID {
+    public var id: String {
         switch self {
         case let .questionnaire(questionnaire):
-            return questionnaire.id
+            return questionnaire.id.description
+        case let .researchKitTask(researchKitTaskContext):
+            return researchKitTaskContext.rawValue
         }
     }
 
@@ -26,6 +29,8 @@ public enum PAWSApplicationTaskContext: Codable, Identifiable {
         switch self {
         case .questionnaire:
             return String(localized: "TASK_CONTEXT_ACTION_QUESTIONNAIRE", bundle: .module)
+        case .researchKitTask:
+            return String(localized: "RESEARCHKIT_TASK_ACTION", bundle: .module)
         }
     }
 }
