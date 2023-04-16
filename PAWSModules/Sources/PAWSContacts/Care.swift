@@ -204,11 +204,11 @@ public struct Care: View {
             ScrollView {
                 VStack {
                     VStack (alignment : .leading) {
-                        Text("Support")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.black)
-                            .padding()
+//                        Text("Support")
+//                            .font(.largeTitle)
+//                            .fontWeight(.bold)
+//                            .foregroundColor(Color.black)
+//                            .padding()
                         VStack {
                             //Image(systemName: "questiondiamond")
                                 //.font(.system(size: 60))
@@ -230,7 +230,7 @@ public struct Care: View {
                                         .font(.largeTitle)
                                         .foregroundColor(.white)
                                   
-                                    Text("Send Documents")
+                                    Text("Send Data")
                                         .font(.headline)
                                         .foregroundColor(.white)
                                 }

@@ -20,7 +20,7 @@ public struct MockUploadList: View {
                     .fontWeight(.bold)
                     .padding([.top], 10)
                     .padding(.leading, 10)
-                    .foregroundColor(.gray)
+                    
                 Image("all_vitals")
                     .resizable()
                     .frame(width: 350, height: 650)

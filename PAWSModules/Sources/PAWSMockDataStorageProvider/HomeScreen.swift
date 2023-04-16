@@ -16,6 +16,20 @@ import PAWSSchedule
 import Scheduler
 import PAWSSharedContext
 
+extension Color {
+    init(hex: String) {
+        let scanner = Scanner(string: hex)
+        var rgbValue: UInt64 = 0
+        scanner.scanHexInt64(&rgbValue)
+        
+        let red = Double((rgbValue & 0xFF0000) >> 16) / 255.0
+        let green = Double((rgbValue & 0x00FF00) >> 8) / 255.0
+        let blue = Double(rgbValue & 0x0000FF) / 255.0
+        
+        self.init(red: red, green: green, blue: blue)
+    }
+}
+
 public struct HomeScreen: View {
     private let backgroundGradient = LinearGradient(
         colors: [.red, .pink, .orange, .yellow],
@@ -77,13 +91,14 @@ public struct HomeScreen: View {
                         .foregroundColor(.white)
                         .padding()
                         .frame(width: 140, height: 30)
-                        .background(.teal)
+                        .background(Color(hex: "73AF91"))
                         .cornerRadius(10)
                 }
                
                 Image("dials")
                     .resizable()
-                    .frame(width: 360, height: 130)
+                    .padding(.leading, 10)
+                    .frame(width: 350, height: 130)
             }
             VStack(alignment: .leading) {
                 HStack {
@@ -99,13 +114,14 @@ public struct HomeScreen: View {
                         .padding()
                   
                         .frame(width: 140, height: 30)
-                        .background(.teal)
+                        .background(Color(hex: "73AF91"))
                         .cornerRadius(10)
                 }
                
                 Image("walk_test")
                     .resizable()
-                    .frame(width: 360, height: 160)
+                    .padding(.leading, 10)
+                    .frame(width: 350, height: 160)
             }
             VStack(alignment: .leading) {
                 HStack {
@@ -121,13 +137,14 @@ public struct HomeScreen: View {
                         .foregroundColor(.white)
                         .padding()
                         .frame(width: 140, height: 30)
-                        .background(.teal)
+                        .background(Color(hex: "73AF91"))
                         .cornerRadius(10)
                 }
                 
                 Image("vitals")
                     .resizable()
-                    .frame(width: 360, height: 190)
+                    .padding(.leading, 10)
+                    .frame(width: 350, height: 190)
             }
         }
         .padding([.top, .leading, .trailing], 10)
