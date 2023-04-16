@@ -62,6 +62,9 @@ public struct ScheduleView: View {
                 if researchKitTaskContext == .woundphoto {
                     PhotoUploadView()
                 }
+                if researchKitTaskContext == .walktest {
+                    SixMinuteWalkButtonView()
+                }
             }
         }
         return destination
