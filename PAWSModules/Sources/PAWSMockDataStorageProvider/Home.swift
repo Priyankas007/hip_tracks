@@ -24,11 +24,6 @@ public struct HomeView: View {
 
     public var body: some View {
         TabView(selection: $selectedTab) {
-            ScheduleView()
-                .tag(Tabs.schedule)
-                .tabItem {
-                    Label("Tasks", systemImage: "list.clipboard")
-                }
             HomeScreen()
                 .tag(Tabs.home)
                 .tabItem {
@@ -38,6 +33,11 @@ public struct HomeView: View {
                 .tag(Tabs.mockUpload)
                 .tabItem {
                     Label("All Data", systemImage: "heart.text.square.fill")
+                }
+            ScheduleView()
+                .tag(Tabs.schedule)
+                .tabItem {
+                    Label("Tasks", systemImage: "list.clipboard")
                 }
             Contacts()
                 .tag(Tabs.contact)

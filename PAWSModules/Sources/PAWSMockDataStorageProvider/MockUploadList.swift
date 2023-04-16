@@ -13,36 +13,21 @@ public struct MockUploadList: View {
     @EnvironmentObject var mockDataStorageProvider: MockDataStorageProvider
 
     public var body: some View {
-        ZStack {
-            Color.white
-                .ignoresSafeArea()
-            //        VStack(alignment: .leading) {
-            //            Text("Notifications")
-            //                .font(.largeTitle)
-            //                .fontWeight(.bold)
-            //                .padding([.top, .leading, .bottom], 20)
-            //                .offset(y: -150)
-            NavigationStack {
-                Group {
-                    if mockDataStorageProvider.mockUploads.isEmpty {
-                        VStack(spacing: 32) {
-                            Image(systemName: "pawprint.circle")
-                                .font(.system(size: 100))
-                                .opacity(0.2)
-                            Text(String(localized: "MOCK_UPLOAD_LIST_PLACEHOLDER", bundle: .module))
-                                .multilineTextAlignment(.center)
-                                .fontWeight(.bold)
-                        }
-                        .padding(32)
-                    } else {
-                        List(mockDataStorageProvider.mockUploads) { mockUpload in
-                            MockUploadHeader(mockUpload: mockUpload)
-                        }
-                    }
-                }
-                .navigationTitle(String(localized: "MOCK_UPLOAD_LIST_TITLE", bundle: .module))
+        ScrollView {
+            VStack(alignment: .leading){
+                Text("All Data")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding([.top], 10)
+                    .padding(.leading, 10)
+                    .foregroundColor(.gray)
+                Image("all_vitals")
+                    .resizable()
+                    .frame(width: 350, height: 650)
             }
+            
         }
+   
     }
 
     public init() {}
