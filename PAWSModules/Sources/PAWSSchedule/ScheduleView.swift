@@ -62,6 +62,9 @@ public struct ScheduleView: View {
                 if researchKitTaskContext == .woundphoto {
                     PhotoUploadView()
                 }
+                if researchKitTaskContext == .walktest {
+                    SixMinuteWalkButtonView()
+                }
             }
         }
         return destination
@@ -108,7 +111,7 @@ struct SchedulerView_Previews: PreviewProvider {
                             description: String(localized: "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_DESCRIPTION"),
                             schedule: Schedule(
                                 start: Calendar.current.startOfDay(for: Date()),
-                                dateComponents: .init(hour: 0, minute: 30), // Every Day at 12:30 AM
+                                dateComponents: .init(hour: 0, minute: 0), // Every Day at 12:00 AM
                                 end: .numberOfEvents(356)
                             ),
                             context: PAWSApplicationTaskContext.questionnaire(Bundle.main.questionnaire(withName: "SocialSupportQuestionnaire"))
