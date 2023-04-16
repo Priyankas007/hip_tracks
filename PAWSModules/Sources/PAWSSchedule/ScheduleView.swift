@@ -58,6 +58,10 @@ public struct ScheduleView: View {
                         await eventContext.event.complete(true)
                     }
                 }
+            case let .researchKitTask(researchKitTaskContext):
+                if researchKitTaskContext == .woundphoto {
+                    PhotoUploadView()
+                }
             }
         }
         return destination
