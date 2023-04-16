@@ -81,7 +81,13 @@ let package = Package(
             name: "PAWSNotificationScreen"
         ),
         .target(
-            name: "PAWSSchedule"
+            name: "PAWSSchedule",
+            dependencies: [
+                .target(name: "PAWSSharedContext"),
+                .product(name: "FHIR", package: "CardinalKit"),
+                .product(name: "Questionnaires", package: "CardinalKit"),
+                .product(name: "Scheduler", package: "CardinalKit")
+            ]
         )
     ]
 )
