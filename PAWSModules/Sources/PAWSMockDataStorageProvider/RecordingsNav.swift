@@ -9,16 +9,15 @@
 import PAWSSharedContext
 import SwiftUI
 
-
 struct RecordingsNav: View {
     private let backgroundGradient = LinearGradient(
         colors: [.red, .pink, .orange],
         startPoint: .leading,
         endPoint: .trailing
     )
-    
+
     @AppStorage(StorageKeys.homeTabSelection) var selectedTab = Tabs.home
-    
+
     var body: some View {
         Button(
             action: {

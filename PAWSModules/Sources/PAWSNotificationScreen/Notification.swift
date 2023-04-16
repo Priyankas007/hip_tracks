@@ -8,15 +8,13 @@
 
 import SwiftUI
 
-
 struct Notification: View {
     private let backgroundGradient = LinearGradient(
         colors: [.red, .pink, .yellow],
         startPoint: .leading,
         endPoint: .trailing
     )
-    
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("February 8th, 2023")
@@ -29,12 +27,12 @@ struct Notification: View {
                             .font(.headline)
                             .padding([.leading, .trailing, .top], 20)
                             .fontWeight(.bold)
-                        
+
                             Text("12:30 PM")
                                 .font(.subheadline)
                             .padding([.leading, .trailing], 20)
                     }
-             
+
                 Divider()
             HStack {
                 Text("Recording successfully uploaded")
@@ -52,7 +50,6 @@ struct Notification: View {
         }
     }
 }
-
 
 struct Notification_Previews: PreviewProvider {
     static var previews: some View {

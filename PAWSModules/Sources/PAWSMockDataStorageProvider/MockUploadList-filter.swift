@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-
 /// Displays the recoded uploads collected by the ``MockDataStorageProvider``.
 public struct MockUploadListFilter: View {
     @EnvironmentObject var mockDataStorageProvider: MockDataStorageProvider
@@ -21,7 +20,7 @@ public struct MockUploadListFilter: View {
             .cornerRadius(10)
             .foregroundColor(.white)
             .padding(5)
-    
+
     public var body: some View {
             VStack(alignment: .leading) {
               Text(String(localized: "MOCK_UPLOAD_LIST_TITLE", bundle: .module))
@@ -36,7 +35,7 @@ public struct MockUploadListFilter: View {
                     button1
                     .frame(maxWidth: .infinity)
                 }
-               
+
                 Group {
                     if mockDataStorageProvider.mockUploads.isEmpty {
                         VStack(spacing: 32) {
@@ -55,11 +54,9 @@ public struct MockUploadListFilter: View {
                 }
             }
     }
-    
-    
+
     public init() {}
-    
-    
+
     private func format(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
@@ -67,7 +64,6 @@ public struct MockUploadListFilter: View {
         return dateFormatter.string(from: date)
     }
 }
-
 
 struct MockUploadsListFilter_Previews: PreviewProvider {
     static var previews: some View {

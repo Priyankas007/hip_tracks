@@ -10,31 +10,29 @@ import XCTest
 import XCTestExtensions
 import XCTHealthKit
 
-
 class HealthKitUploadTests: XCTestCase {
     override func setUpWithError() throws {
         try super.setUpWithError()
-        
+
         try disablePasswordAutofill()
-        
+
         continueAfterFailure = false
-        
+
         let app = XCUIApplication()
         app.launchArguments = ["--showOnboarding"]
         app.deleteAndLaunch(withSpringboardAppName: "PAWS")
     }
-    
-    
+
     func testHealthKitMockUpload() throws {
         let app = XCUIApplication()
         try app.conductOnboardingIfNeeded()
         try app.navigateToMockUpload()
         try exitAppAndOpenHealth(.electrocardiograms)
-        
+
         app.activate()
-        
+
         sleep(5)
-        
+
         try app.navigateToMockUpload()
     }
 }

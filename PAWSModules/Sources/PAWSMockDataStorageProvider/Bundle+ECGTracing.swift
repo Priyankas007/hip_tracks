@@ -16,7 +16,7 @@ extension Foundation.Bundle {
             print(self.bundleURL)
             fatalError("Could not find the ecgTracing \"\(name).json\" in Bundle.")
         }
-        
+
         do {
             let resourceData = try Data(contentsOf: resourceURL)
             return try JSONDecoder().decode(Observation.self, from: resourceData)

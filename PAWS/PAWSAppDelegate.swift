@@ -17,11 +17,11 @@ import FirestoreStoragePrefixUserIdAdapter
 import HealthKit
 import HealthKitDataSource
 import PAWSMockDataStorageProvider
+import PAWSSchedule
 import PAWSSharedContext
 import Questionnaires
 import Scheduler
 import SwiftUI
-
 
 class PAWSAppDelegate: CardinalKitAppDelegate {
     override var configuration: Configuration {
@@ -39,10 +39,10 @@ class PAWSAppDelegate: CardinalKitAppDelegate {
             }
             QuestionnaireDataSource()
             MockDataStorageProvider()
+            PAWSApplicationScheduler()
         }
     }
-    
-    
+
     private var firestore: Firestore<FHIR> {
         let settings = FirestoreSettings()
         if FeatureFlags.useFirebaseEmulator {
@@ -50,7 +50,7 @@ class PAWSAppDelegate: CardinalKitAppDelegate {
             settings.isPersistenceEnabled = false
             settings.isSSLEnabled = false
         }
-        
+
         return Firestore(
             adapter: {
                 FHIRToFirestoreAdapter()
@@ -59,8 +59,7 @@ class PAWSAppDelegate: CardinalKitAppDelegate {
             settings: settings
         )
     }
-    
-    
+
     private var healthKit: HealthKit<FHIR> {
         HealthKit {
             CollectSample(

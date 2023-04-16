@@ -19,7 +19,7 @@ struct PAWS: App {
     @AppStorage(StorageKeys.onboardingFlowComplete) var completedOnboardingFlow = false
 
     @State var pressedStart = false
-    
+
     var isSheetPresented: Binding<Bool> {
         Binding(
             get: {
@@ -27,7 +27,7 @@ struct PAWS: App {
             }, set: { _ in }
         )
     }
-    
+
     var body: some Scene {
         WindowGroup {
             Group {

@@ -10,9 +10,10 @@ import PAWSContacts
 import PAWSNotificationScreen
 import PAWSSharedContext
 import SwiftUI
-
+import PAWSSchedule
 
 enum Tabs: String {
+    case schedule
     case home
     case contact
     case mockUpload
@@ -20,9 +21,14 @@ enum Tabs: String {
 
 public struct HomeView: View {
     @AppStorage(StorageKeys.homeTabSelection) var selectedTab = Tabs.home
-    
+
     public var body: some View {
         TabView(selection: $selectedTab) {
+            ScheduleView()
+                .tag(Tabs.schedule)
+                .tabItem {
+                    Label("Questionaires", systemImage: "list.clipboard")
+                }
             HomeScreen()
                 .tag(Tabs.home)
                 .tabItem {
@@ -42,7 +48,6 @@ public struct HomeView: View {
     }
     public init() {}
 }
-
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

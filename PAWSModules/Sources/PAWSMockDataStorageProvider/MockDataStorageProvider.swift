@@ -19,8 +19,7 @@ import HealthKitUI
 /// A data storage provider that collects all uploads and displays them in a user interface using the ``MockUploadList``.
 public actor MockDataStorageProvider: DataStorageProvider, ObservableObjectProvider, ObservableObject {
     public typealias ComponentStandard = FHIR
-    
-    
+
     let encoder: JSONEncoder = {
         let encoder = JSONEncoder()
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes]
@@ -28,24 +27,22 @@ public actor MockDataStorageProvider: DataStorageProvider, ObservableObjectProvi
     }()
     @MainActor @Published
     private (set) var mockUploads: [MockUpload] = []
-    
-    
+
     public init() { }
-    
-    
+
     public func process(_ element: DataChange<ComponentStandard.BaseType, ComponentStandard.RemovalContext>) async throws {
         switch element {
         case let .addition(element):
             let data = try encoder.encode(element)
             let json = String(decoding: data, as: UTF8.self)
             print(json)
-            
+
             // let tracing = try JSONDecoder().decode(HKElectrocardiogramMapping.self, from: data)
             // print(tracing)
             // Bundle.module.ecgTracing(withName: json)
             // let symptoms = tracing.symptomsStatus.codings.description
             let symptoms = getSymptoms(tracing: json)
-            
+
             _Concurrency.Task { @MainActor in
                 mockUploads.insert(
                     MockUpload(
@@ -71,10 +68,10 @@ public actor MockDataStorageProvider: DataStorageProvider, ObservableObjectProvi
             }
         }
     }
-    
+
     private func getSymptoms(tracing: String) -> String {
         var symptoms = ""
-        
+
         if tracing.contains("Fatigue") {
             symptoms += "Fatigue; "
         }
@@ -99,7 +96,7 @@ public actor MockDataStorageProvider: DataStorageProvider, ObservableObjectProvi
         if tracing.contains("Other") {
             symptoms += "Other; "
         }
-        
+
         return symptoms
     }
 }

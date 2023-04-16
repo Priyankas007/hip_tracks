@@ -8,15 +8,13 @@
 
 import SwiftUI
 
-
 struct AboutStudy: View {
     private let backgroundGradient = LinearGradient(
         colors: [.red, .pink, .orange],
         startPoint: .leading,
         endPoint: .trailing
     )
-    
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             VStack {
@@ -37,7 +35,7 @@ struct AboutStudy: View {
                     .font(.headline)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .center)
-                
+
                 Text("Find out how you're helping the Stanford Pediatric Apple Watch Study (PAWS).")
                         .font(.subheadline)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -56,7 +54,6 @@ struct AboutStudy: View {
         )
     }
 }
-
 
 struct AboutStudy_Previews: PreviewProvider {
     static var previews: some View {

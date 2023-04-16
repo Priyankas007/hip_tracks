@@ -10,7 +10,6 @@ import Account
 import Onboarding
 import SwiftUI
 
-
 struct PAWSSignUp: View {
     var body: some View {
         SignUp {
@@ -24,7 +23,6 @@ struct PAWSSignUp: View {
             .navigationBarTitleDisplayMode(.large)
     }
 }
-
 
 #if DEBUG
 struct PAWSSignUp_Previews: PreviewProvider {

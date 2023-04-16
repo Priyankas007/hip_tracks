@@ -9,12 +9,10 @@
 import FHIR
 import SwiftUI
 
-
 struct LazyText: View {
     private let text: String
     @State private var lines: [(linenumber: Int, text: String)] = []
-    
-    
+
     var body: some View {
         LazyVStack(alignment: .leading) {
             ForEach(lines, id: \.linenumber) { line in
@@ -30,13 +28,11 @@ struct LazyText: View {
                 }
             }
     }
-    
-    
+
     init(text: String) {
         self.text = text
     }
 }
-
 
 struct LazyText_Previews: PreviewProvider {
     static let mappingJSONString = {

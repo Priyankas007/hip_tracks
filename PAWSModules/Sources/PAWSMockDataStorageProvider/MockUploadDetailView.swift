@@ -8,11 +8,9 @@
 
 import SwiftUI
 
-
 struct MockUploadDetailView: View {
     let mockUpload: MockUpload
-    
-    
+
     var body: some View {
         List {
             Section(String(localized: "MOCK_UPLOAD_DETAIL_HEADER", bundle: .module)) {

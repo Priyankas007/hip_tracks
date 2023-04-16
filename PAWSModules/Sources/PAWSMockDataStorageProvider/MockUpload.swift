@@ -13,18 +13,17 @@ import FirestoreDataStorage
 import Foundation
 import HealthKitOnFHIR
 
-
 struct MockUpload: Identifiable, Hashable {
     enum UploadType {
         case add
         case delete
     }
-    
+
     enum UploadStatus {
         case success
         case failure
     }
-    
+
     let identifier: String
     let date = Date()
     let type: UploadType
@@ -35,8 +34,7 @@ struct MockUpload: Identifiable, Hashable {
     var id: String {
         "\(type): \(path)/\(identifier) at \(date.debugDescription)"
     }
-    
-    
+
     init(id: String, type: UploadType, path: String, body: String? = nil, symptoms: String? = "") {
         self.identifier = id
         self.type = type

@@ -12,7 +12,8 @@ import FirebaseAccount
 import Foundation
 import SwiftUI
 import Views
-
+import PAWSSchedule
+import Scheduler
 
 public struct HomeScreen: View {
     private let backgroundGradient = LinearGradient(
@@ -20,15 +21,14 @@ public struct HomeScreen: View {
         startPoint: .leading,
         endPoint: .trailing
     )
-    
+
     @EnvironmentObject var account: Account
     @EnvironmentObject var firebaseAccountConfiguration: FirebaseAccountConfiguration<FHIR>
     @EnvironmentObject var mockDataStorageProvider: MockDataStorageProvider
 
-    
     public var body: some View {
         let name = firebaseAccountConfiguration.user?.displayName ?? "Name Needed"
-        
+
         ScrollView(.vertical) {
             VStack(alignment: .leading) {
                 HStack(alignment: .top) {
@@ -55,10 +55,24 @@ public struct HomeScreen: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding([.top, .leading, .trailing], 10)
                 Divider().frame(maxWidth: .infinity)
+                questionaire
                 recording
                 aboutstudy
             }.frame(maxHeight: .infinity, alignment: .top)
         }
+    }
+    @ViewBuilder var questionaire: some View {
+        VStack(alignment: .leading) {
+            Text("Questionaire")
+                .font(.title3)
+                .fontWeight(.bold)
+                .padding([.top], 10)
+                .padding(.leading, 10)
+                .foregroundColor(.gray)
+            ScheduleView()
+        }
+        .padding([.top, .leading, .trailing], 10)
+        .frame(maxWidth: .infinity, alignment: .topLeading)
     }
     @ViewBuilder var recording: some View {
         if mockDataStorageProvider.mockUploads.isEmpty {
@@ -98,7 +112,7 @@ public struct HomeScreen: View {
         .padding([.top, .leading, .trailing], 10)
         .frame(maxWidth: .infinity, alignment: .topLeading)
     }
-    
+
     public init() {}
 
     func firstName(fullName: String) -> String {
@@ -107,7 +121,6 @@ public struct HomeScreen: View {
         return first.capitalized + "!"
     }
 }
-
 
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {

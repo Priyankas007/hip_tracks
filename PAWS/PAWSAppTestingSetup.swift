@@ -9,11 +9,9 @@
 import PAWSSharedContext
 import SwiftUI
 
-
 private struct PAWSTestingSetup: ViewModifier {
     @AppStorage(StorageKeys.onboardingFlowComplete) var completedOnboardingFlow = false
-    
-    
+
     func body(content: Content) -> some View {
         content
             .task {
@@ -26,7 +24,6 @@ private struct PAWSTestingSetup: ViewModifier {
             }
     }
 }
-
 
 extension View {
     func testingSetup() -> some View {
