@@ -81,7 +81,18 @@ let package = Package(
             name: "PAWSNotificationScreen"
         ),
         .target(
-            name: "PAWSSchedule"
+            name: "PAWSSchedule",
+            dependencies: [
+                .product(name: "FirestoreDataStorage", package: "firebase-ios-sdk"),
+                .product(name: "FirebaseFirestore", package: "firebase-ios-sdk"),
+                .product(name: "FirebaseFirestoreSwift", package: "firebase-ios-sdk"),
+                .product(name: "FirebaseStorage", package: "firebase-ios-sdk"),
+                .product(name: "FirebaseAuth", package: "firebase-ios-sdk"),
+                .target(name: "PAWSSharedContext"),
+                .product(name: "FHIR", package: "CardinalKit"),
+                .product(name: "Questionnaires", package: "CardinalKit"),
+                .product(name: "Scheduler", package: "CardinalKit")
+            ]
         )
     ]
 )

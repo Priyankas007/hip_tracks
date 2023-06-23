@@ -6,8 +6,8 @@
 // SPDX-License-Identifier: MIT
 //
 
-import FHIR
 import Foundation
+import FHIR
 
 extension Foundation.Bundle {
     func questionnaire(withName name: String) -> Questionnaire {

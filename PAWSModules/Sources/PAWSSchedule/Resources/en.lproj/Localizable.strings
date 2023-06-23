@@ -6,8 +6,23 @@
 // SPDX-License-Identifier: MIT
 //
 
+"QUESTIONNAIRE_ACTION" = "Start Questionnaire";
+"RESEARCHKIT_TASK_ACTION" = "Start Task";
+
 // MARK: - Schedule
-"SCHEDULE_LIST_TITLE" = "Schedule";
+"SCHEDULE_LIST_TITLE" = "Tasks";
 "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_TITLE" = "Hip Mobility Questionnaire";
 "TASK_SOCIAL_SUPPORT_QUESTIONNAIRE_DESCRIPTION" = "Please fill out the Hip Mobility Questionnaire every day.";
 "TASK_CONTEXT_ACTION_QUESTIONNAIRE" = "Start Questionnaire";
+
+// MARK: - Wound Photo
+"SCHEDULE_PHOTO_TITLE" = "Photo";
+"TASK_PHOTO_TITLE" = "Wound Photo Upload";
+"TASK_PHOTO_DESCRIPTION" = "If your surgical site wound is healing abnormally (compared to the provided expected healing images) please take a photo of the wound for your healthcare provider.";
+"TASK_PHOTO_QUESTIONNAIRE" = "Start Questionnaire";
+
+// MARK: - 6 Minute Walk Test
+"SCHEDULE_WALK_TITLE" = "Walk Test";
+"TASK_WALK_TITLE" = "6 Minute Walk Test";
+"TASK_WALK_DESCRIPTION" = "This 6 Minute Walk Test will be used to track your mobility as it increases through your recovery";
+"TASK_WALK_QUESTIONNAIRE" = "Start Walk Test";

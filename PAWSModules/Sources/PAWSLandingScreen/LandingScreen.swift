@@ -17,7 +17,7 @@ public struct LandingScreen: View {
     @Binding private var launchStatus: Bool
 
     public var body: some View {
-        VStack{
+        VStack {
                 VStack {
                     Image("hip_tracks_logo")
                         .resizable()
@@ -41,7 +41,7 @@ public struct LandingScreen: View {
                     .border(backgroundGradient, width: 3)
                     .cornerRadius(5)
                     .offset(y: -20)
-                   
+
                 }
             )
         }

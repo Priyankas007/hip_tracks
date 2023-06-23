@@ -27,7 +27,7 @@ public struct HomeView: View {
             ScheduleView()
                 .tag(Tabs.schedule)
                 .tabItem {
-                    Label("Questionaires", systemImage: "list.clipboard")
+                    Label("Tasks", systemImage: "list.clipboard")
                 }
             HomeScreen()
                 .tag(Tabs.home)
@@ -37,12 +37,12 @@ public struct HomeView: View {
             MockUploadList()
                 .tag(Tabs.mockUpload)
                 .tabItem {
-                    Label("Reports", systemImage: "heart.text.square.fill")
+                    Label("All Data", systemImage: "heart.text.square.fill")
                 }
             Contacts()
                 .tag(Tabs.contact)
                 .tabItem {
-                    Label("Study Information", systemImage: "doc.text.fill")
+                    Label("Support", systemImage: "person.fill")
                 }
         }
     }
